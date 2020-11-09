@@ -6,46 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".AddNoteFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilNoteTitle"
-        android:layout_width="0dp"
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/hintNoteTitle"
+        android:autofillHints="@string/hintNoteTitle"
+        android:inputType="text"
+        android:textSize="18sp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Title"
-            android:padding="8dp"
-            android:textSize="24sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilNoteText"
-        android:layout_width="0dp"
+    <EditText
+        android:id="@+id/etNoteText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilNoteTitle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Note"
-            android:textSize="18sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="16dp"
+        android:autofillHints="@string/hintNoteBody"
+        android:hint="@string/hintNoteBody"
+        android:inputType="textMultiLine"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/etNoteTitle" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Save"
+        android:text="@string/btnSave"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilNoteText" />
-
+        app:layout_constraintTop_toBottomOf="@+id/etNoteText"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

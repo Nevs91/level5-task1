@@ -13,4 +13,7 @@
 
     <string name="title">My Notepad</string>
     <string name="last_updated">Last updated: %1$s</string>
+    <string name="hintNoteTitle">Title</string>
+    <string name="hintNoteBody">Note</string>
+    <string name="btnSave">Save</string>
 </resources>

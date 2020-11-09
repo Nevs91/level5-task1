@@ -42,8 +42,8 @@ class AddNoteFragment : Fragment() {
         // fill the text fields with the current text and title from the NoteViewModel
         viewModel.note.observe(viewLifecycleOwner, Observer { note ->
             note?.let {
-                tilNoteTitle.editText?.setText(it.title)
-                tilNoteText.editText?.setText(it.text)
+                etNoteTitle?.setText(it.title)
+                etNoteText?.setText(it.text)
             }
         })
 
@@ -59,8 +59,8 @@ class AddNoteFragment : Fragment() {
 
     private fun saveNote() {
         viewModel.updateNote(
-            tilNoteTitle.editText?.text.toString(),
-            tilNoteText.editText?.text.toString()
+            etNoteTitle?.text.toString(),
+            etNoteText?.text.toString()
         )
     }
 }
